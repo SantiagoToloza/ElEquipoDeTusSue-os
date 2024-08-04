@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Alquila tu Cancha
 
-## Getting Started
+## Introducción
 
-First, run the development server:
+¿Alguna vez soñaste con ver un partido de fútbol en donde se enfrenten tus jugadores favoritos? Imagina poder armar dos equipos de 5 jugadores cada uno, en donde no tengas ninguna limitación... posición, presupuesto, contrato, club, edad... tu mente es tu límite.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Alquila tu Cancha** es una web app que te permite crear **"El partido de tus sueños"**, un partido de fútbol 5 en donde se enfrenten tus 10 jugadores favoritos.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Darle la bienvenida al usuario.
+- Listar los equipos creados.
+- Crear dos equipos.
+- Darle un nombre a cada equipo y poder editarlo si es necesario.
+- Eliminar un equipo creado.
+- Impedir la creación de más de dos equipos.
+- Ver el detalle de un equipo (listado de jugadores vinculado).
+- Vincular jugadores a un equipo.
+- Comunicar gráficamente cuando ambos equipos están "formados y completos".
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Precondiciones
 
-## Learn More
+- Se entiende como equipo formado a un equipo creado y nombrado.
+- Se entiende como equipo completo al equipo que tiene 5 jugadores.
+- El listado de jugadores disponible debe cargarse de la API https://apifootball.com/documentation/
+- No puede crearse más de 2 equipos.
+- No puede haber más de 5 jugadores en cada equipo.
+- No puede repetirse un mismo jugador en el equipo ni en el equipo adversario.
 
-To learn more about Next.js, take a look at the following resources:
+## Tecnologías
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js 14.2.5
+- TypeScript
+- Tailwind CSS
+- Docker
+- Git Flow
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Instalación y Ejecución
 
-## Deploy on Vercel
+### Requisitos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Node.js
+- Docker y Docker Compose
+- Git
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Pasos para la Instalación
