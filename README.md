@@ -44,3 +44,6 @@
 - Git
 
 ### Pasos para la Instalación
+
+-clonar el repo
+-levantar con : docker run -p 3000:3000 fulvoproject
