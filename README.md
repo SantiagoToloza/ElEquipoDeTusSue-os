@@ -45,5 +45,6 @@
 
 ### Pasos para la Instalación
 
--clonar el repo
+-clonar el repo<
+-crear .env y pegar dentro NEXT_PUBLIC_API_URL = ce057e13b31c9c06757ef249bd9b464490069f364a1fd931e3487acfdd11964b
 -levantar con : docker run -p 3000:3000 fulvoproject
