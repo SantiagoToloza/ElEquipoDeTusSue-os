@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import type { player } from '../../types/players';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 
-const Final = () => {
+const FinalContent = () => {
     const searchParams = useSearchParams();
     const [team1, setTeam1] = useState<{ name: string, players: player[] } | null>(null);
     const [team2, setTeam2] = useState<{ name: string, players: player[] } | null>(null);
@@ -20,21 +20,20 @@ const Final = () => {
     }, [searchParams]);
 
     return (
-        <div className="relative h-screen w-full text-orange-800 container">
+        <div className="relative h-screen w-full">
             <Image
                 src="/soccer.jpg"
                 layout="fill"
                 objectFit="cover"
                 alt="Cancha de Fútbol"
             />
-            <div className="container flex">
-
+            <div className="flex justify-between items-center h-full px-10">
                 {team1 && (
-                    <div className="absolute left-10 top-1/4">
-                        <h2 className="text-white text-xl mb-4">{team1.name}</h2>
+                    <div className="text-center">
+                        <h2 className="text-white text-2xl mb-4">{team1.name}</h2>
                         <ul>
                             {team1.players.map((player, index) => (
-                                <li key={index} className="text-white">
+                                <li key={index} className="text-white text-lg">
                                     {player.fullname}
                                 </li>
                             ))}
@@ -42,11 +41,11 @@ const Final = () => {
                     </div>
                 )}
                 {team2 && (
-                    <div className="absolute right-10 top-1/4">
-                        <h2 className="text-white text-xl mb-4">{team2.name}</h2>
+                    <div className="text-center">
+                        <h2 className="text-white text-2xl mb-4">{team2.name}</h2>
                         <ul>
                             {team2.players.map((player, index) => (
-                                <li key={index} className="text-white">
+                                <li key={index} className="text-white text-lg">
                                     {player.fullname}
                                 </li>
                             ))}
@@ -55,6 +54,14 @@ const Final = () => {
                 )}
             </div>
         </div>
+    );
+};
+
+const Final = () => {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <FinalContent />
+        </Suspense>
     );
 };
 
