@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
     return (
-        <div className="container mx-auto grid md:grid-cols-2 grid-rows-1 w-full flex-grow pt-10 gap-4">
+        <div className="container mx-auto grid md:grid-cols-2 grid-rows-1 w-full flex-grow pt-10 gap-4 text-white">
             <div className="flex justify-center items-center animate-pulse">
                 <Image src="/soccerAbout2.png" layout="intrinsic" objectFit="cover" width={600} height={600} alt="2" />
             </div>
@@ -15,7 +15,7 @@ export default function About() {
                 </div>
 
 
-                <p className="px-4 animate-fade-left animate-once animate-ease-in">
+                <p className="px-4 animate-fade-left animate-once animate-ease-in text-white">
                     <strong>Alquila tu Cancha</strong> es una aplicación diseñada para facilitar la organización de partidos de fútbol entre amigos y equipos. Nuestra misión es simplificar el proceso de reserva de canchas y la gestión de equipos, permitiendo a los usuarios enfocarse en lo que más les gusta: jugar al fútbol. Con nuestra plataforma, puedes dar la bienvenida a nuevos usuarios, listar equipos creados, crear y editar equipos, y gestionar jugadores vinculados a cada equipo. Además, aseguramos que cada equipo esté completo antes de los partidos, comunicándolo gráficamente para una mejor experiencia de usuario. Nuestra meta es proporcionar una herramienta completa y fácil de usar que haga de la organización de partidos de fútbol una tarea rápida y agradable. ¡Únete a nosotros y empieza a disfrutar de tu deporte favorito sin complicaciones!
                 </p>
             </div>
